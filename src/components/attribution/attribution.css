@@ -1,0 +1,19 @@
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	padding-bottom: 1rem;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+.attribution .home {
+	display: block;
+	margin-top: 0.25rem;
+	font-size: 0.8rem;
+}
+
+.attribution a {
+	width: fit-content;
+}
