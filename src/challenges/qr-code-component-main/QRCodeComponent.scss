@@ -77,11 +77,15 @@
 			margin-top: 1.5rem;
 			font-size: 22px;
 			font-weight: var(--font-weight-header);
+
+      color: var(--dark-blue);
 		}
 	
 		.card-text {
 			padding: 0;
 			margin: 1rem 1rem 1.5rem;
+
+      color: var(--grayish-blue);
 		}
   }
 }

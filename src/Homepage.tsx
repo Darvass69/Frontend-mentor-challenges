@@ -36,6 +36,9 @@ export default function DefaultHomepage() {
             <Link href="/QR-code-component">
               1st challenge: QR code component
             </Link>
+            <Link href="/Blog-preview-card">
+              2nd challenge: Blog preview card
+            </Link>
           </div>
         </div>
       </div>
