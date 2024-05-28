@@ -10,25 +10,25 @@ import "./QRCodeComponent.scss";
 export default function QRCodeComponent(): React.JSX.Element {
   return (
     <>
-      <Helmet>
-        <title>Frontend Mentor | QR code component</title>
-        <link rel="icon" type="image/svg+xml" href={favicon} />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
-          rel="stylesheet"
-        />
-      </Helmet>
-
       <div className="challenge_qr-code-component-main">
-        <div className="stack-y">
-          <div className="layout-center">
+        <Helmet>
+          <title>Frontend Mentor | QR code component</title>
+          <link rel="icon" type="image/svg+xml" href={favicon} />
+
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+            rel="stylesheet"
+          />
+        </Helmet>
+
+        <div className="dock-panel">
+          <div className="layout-center center">
             <div className="card">
               <img src={qrCode} className="qr-code" />
               <h1 className="card-title">
@@ -40,7 +40,7 @@ export default function QRCodeComponent(): React.JSX.Element {
               </p>
             </div>
           </div>
-          <Attribution />
+          <Attribution className="bottom" />
         </div>
       </div>
     </>

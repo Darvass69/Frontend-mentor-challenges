@@ -1,10 +1,19 @@
 import { Link } from "wouter";
 import "./attribution.css"
+import { HtmlHTMLAttributes } from "react";
 
 
-export default function Attribution(): React.JSX.Element {
+interface AttributionProps extends HtmlHTMLAttributes<HTMLDivElement> {
+  bgColor?: string
+  textColor?: string
+  label?: string
+}
+
+export default function Attribution(props: AttributionProps): React.JSX.Element {
+  
+  
   return (
-    <div className="attribution">
+    <div  {...props} {...(props.className ? {className: props.className + " attribution"} : {className: "attribution"})}>
         <div className="home">
           <Link href="/">Home</Link>
         </div>

@@ -1,7 +1,8 @@
 .homepage {
   display: flex;
   place-items: center;
-  min-width: 320px;
+  width: 100%;
+  height: 100%;
   min-height: 100vh;
 
   & > div {
@@ -22,7 +23,7 @@
   }
 
   .logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
+    filter: drop-shadow(0 0 2em #56b8f9aa);
   }
 
   @keyframes logo-spin {
@@ -49,11 +50,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
 
     button {
       margin: 0 0 0.5rem;
     }
-    
+  }
+
+  .horizontal-stack {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
 

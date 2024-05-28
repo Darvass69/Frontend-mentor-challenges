@@ -1,25 +1,28 @@
 .challenge_qr-code-component-main {
-  --white: hsl(0, 0%, 100%);
-  --light-gray: hsl(212, 45%, 89%);
-  --grayish-blue: hsl(220, 15%, 55%);
-  --dark-blue: hsl(218, 44%, 22%);
+  
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
 
-  --font-weight-header: 700;
+    --font-weight-paragraph: 400;
+    --font-weight-header: 700;
 
-  width: 100%;
-  height: 100vh;
-  height: 100dvh;
-  overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    // Min height doesn't work because we don't have a height specified
+    // min-height: 100vh;
 
-  font-size: 15px;
+    font-size: 15px;
 
-  font-family: "Outfit", "Times New Roman", Times, serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Outfit", "Times New Roman", Times, serif;
+    font-optical-sizing: auto;
+    font-weight: var(--font-weight-paragraph);
+    font-style: normal;
 
-  background-color: var(--light-gray);
-
+    background-color: var(--light-gray);
 
 
   .stack-y {
@@ -29,6 +32,42 @@
     // justify-content: center;
     align-items: center;
     // flex: 1;
+  }
+
+  .dock-panel {
+    display: grid;
+    grid-template-areas:
+      "center"
+      "bottom";
+
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr 10%;
+
+
+    width: 100%;
+    height: 100%;
+
+    // I need to figure out how grid works
+
+    // .top {
+    //   grid-area: top;
+    // }
+
+    // .left {
+    //   grid-area: left;
+    // }
+
+    .center {
+      grid-area: center;
+    }
+
+    // .right {
+    //   grid-area: right;
+    // }
+
+    .bottom {
+      grid-area: bottom;
+    }
   }
 
   // layout that center vertically and horizontally
@@ -43,10 +82,10 @@
   }
 
   .card {
-		--content-width: 288px;
-		--card-padding: 1rem;
+    --content-width: 288px;
+    --card-padding: 1rem;
 
-		max-width: calc(var(--content-width) + var(--card-padding) * 2);
+    max-width: calc(var(--content-width) + var(--card-padding) * 2);
     max-height: 100%;
     min-height: 0;
     // width: 250px;
@@ -54,38 +93,37 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-		text-align: center;
+    text-align: center;
 
-		padding: var(--card-padding);
+    padding: var(--card-padding);
     margin: 1.5rem;
-		border-radius: 20px;
+    border-radius: 20px;
     background-color: var(--white);
-		filter: drop-shadow(0px 25px 25px rgba(0, 0, 0, 0.0477));
-    
+    filter: drop-shadow(0px 25px 25px rgba(0, 0, 0, 0.0477));
 
-		.qr-code {
-			max-width: var(--content-width);
+    .qr-code {
+      max-width: var(--content-width);
       width: auto;
-			height: auto;
-			border-radius: 10px;
-			overflow: hidden;
-		}
-	
-		h1.card-title {
-			padding: 0;
-			margin: 0;
-			margin-top: 1.5rem;
-			font-size: 22px;
-			font-weight: var(--font-weight-header);
+      height: auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    h1.card-title {
+      padding: 0;
+      margin: 0;
+      margin-top: 1.5rem;
+      font-size: 22px;
+      font-weight: var(--font-weight-header);
 
       color: var(--dark-blue);
-		}
-	
-		.card-text {
-			padding: 0;
-			margin: 1rem 1rem 1.5rem;
+    }
+
+    .card-text {
+      padding: 0;
+      margin: 1rem 1rem 1.5rem;
 
       color: var(--grayish-blue);
-		}
+    }
   }
 }

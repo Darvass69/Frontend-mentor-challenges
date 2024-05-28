@@ -1,28 +1,9 @@
-/* Very basic styles that are only there to abstract body and root */
-/*! Probably doesn't work completely in this configuration, but its a start */
-/* html, body {
-  height: 100%;
-  width: 100%;
-} */
-/*
-body {
-  margin: 0;
-  /* Do we keep min width? It seems to work fine. */
-/* min-width: 320px;
-  min-height: 100vh; */
-/*
-}
-
-/* #root {
-  height: 100%;
-  width: 100%;
-} */
+/* Very basic styles that might not be needed */
 
 
 body {
   font-family: "Nunito Sans", -apple-system, ".SFNSText-Regular", "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  margin: 0;
   /* overflow: hidden; */
 
   -webkit-font-smoothing: antialiased;
@@ -31,6 +12,10 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+/* I don't know if this is a good idea to have all the time, but I'll remove it if I find a problem with it */
+html, body, #root {
+  height: 100%;
+}
 
 /* css reset: https://www.joshwcomeau.com/css/custom-css-reset/ */
 
@@ -79,4 +64,11 @@ p, h1, h2, h3, h4, h5, h6 {
 */
 #root, #__next {
   isolation: isolate;
+}
+
+
+/* Additional css reset to test */
+/* We might remove it later */
+* {
+  text-decoration: none;
 }
