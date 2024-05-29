@@ -5,9 +5,10 @@ import Homepage from "./Homepage";
 
 import viteLogo from "/vite.svg";
 import {Helmet} from "react-helmet";
-import {Button} from "my-first-package";
+import {Button} from "my-react-component-library";
 import {useHashLocation} from "wouter/use-hash-location";
-// import BlogPreviewCard from "./challenges/blog-preview-card-main/BlogPreviewCard";
+import RecipePage from "./challenges/recipe-page-main/RecipePage";
+import BlogPreviewCard from "./challenges/blog-preview-card-main/BlogPreviewCard";
 
 export default function App(): React.JSX.Element {
   return (
@@ -20,12 +21,13 @@ export default function App(): React.JSX.Element {
           <Route path="/test3" component={() => <Test nbObjects={40} type={2}/>} /> */}
           
           <Route path="/QR-code-component" component={QRCodeComponent} />
-          {/* <Route path="/Blog-preview-card" component={BlogPreviewCard}/> */}
+          <Route path="/Blog-preview-card" component={BlogPreviewCard}/>
+          <Route path="/Recipe-page" component={RecipePage} />
 
           {/*~ param example ~*/}
           {/* <Route path="/users/:name">
-          {(params) => <>Hello, {params.name}!</>}
-        </Route> */}
+            {(params) => <>Hello, {params.name}!</>}
+          </Route> */}
 
           {/* Default route in a switch */}
           <Route>
@@ -45,7 +47,9 @@ function Test({nbObjects, type} : {nbObjects?: number, type?:number}) {
   nbObjects = nbObjects ?? 5;
   //TODO
   // Fix no scroll pages on mobile: we need to hide the address bar in pages that have no overflow/scrollable content.
-  // At the moment, we always have the address bar and its annoying.
+  //    At the moment, we always have the address bar and its annoying.
+
+  // Helmet doesn't always change the favicon properly
 
   const toggleFullScreen = (): void => {};
 

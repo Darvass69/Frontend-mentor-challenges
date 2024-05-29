@@ -10,20 +10,20 @@ export default function BlogPreviewCard(): React.JSX.Element {
   return (
     <>
       <Helmet>
-        <title>Frontend Mentor | QR code component</title>
-        <link rel="icon" type="image/svg+xml" href={favicon} />
+          <title>Frontend Mentor | QR code component</title>
+          <link rel="icon" type="image/svg+xml" href={favicon} />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
-          rel="stylesheet"
-        />
-      </Helmet>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+            rel="stylesheet"
+          />
+        </Helmet>
 
       <div className="blog-preview-card-main">
         <div className="stack-y">

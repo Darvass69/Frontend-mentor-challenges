@@ -4,7 +4,7 @@ import {Link} from "wouter";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./Homepage.scss";
-import {Button} from "my-first-package";
+import {Button} from "my-react-component-library";
 
 export default function Homepage() {
   const [count, setCount] = useState(0);
@@ -51,6 +51,9 @@ export default function Homepage() {
             </Link>
             <Link href="/Blog-preview-card">
               2nd challenge: Blog preview card
+            </Link>
+            <Link href="/Recipe-page">
+              3rd challenge: Recipe page
             </Link>
             <MarginAuto directions={["Bottom"]}/>
       </div>
